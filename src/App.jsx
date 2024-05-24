@@ -7,26 +7,26 @@ import {
 import Home from "./pages/Home";
 import About from "./pages/About";
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Home />,
-//   },
-//   {
-//     path: "/about",
-//     element: <About />,
-//   },
-// ]);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+]);
 
 //old version of defining routes
-const routerDefinitions = createRoutesFromElements(
-  <Route>
-    <Route path="/" element={<Home />} />
-    <Route path="/about" element={<About />} />
-  </Route>
-);
+// const routerDefinitions = createRoutesFromElements(
+//   <Route>
+//     <Route path="/" element={<Home />} />
+//     <Route path="/about" element={<About />} />
+//   </Route>
+// );
 
-const router = createBrowserRouter(routerDefinitions);
+// const router = createBrowserRouter(routerDefinitions);
 
 function App() {
   return <RouterProvider router={router} />;
