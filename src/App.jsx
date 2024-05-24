@@ -1,15 +1,32 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
 import Home from "./pages/Home";
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/params",
-    element: <p>URL Params</p>,
-  },
-]);
+import About from "./pages/About";
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Home />,
+//   },
+//   {
+//     path: "/about",
+//     element: <About />,
+//   },
+// ]);
+
+//old version of defining routes
+const routerDefinitions = createRoutesFromElements(
+  <Route>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+  </Route>
+);
+
+const router = createBrowserRouter(routerDefinitions);
 
 function App() {
   return <RouterProvider router={router} />;
