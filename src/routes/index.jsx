@@ -6,19 +6,31 @@ import {
 } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
+import Contact from "../pages/Contact";
+import RootLayout from "../pages/Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 
-//old version of defining routes
+//older way of defining routes
 // const routerDefinitions = createRoutesFromElements(
 //   <Route>
 //     <Route path="/" element={<Home />} />
