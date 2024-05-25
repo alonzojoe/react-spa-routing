@@ -11,3 +11,7 @@
     font-weight: 500;
 }
 
+.links li a:hover,
+.links li a.active{
+    color: var(--color-primary-800);
+}
