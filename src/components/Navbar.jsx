@@ -11,6 +11,7 @@ const Navbar = () => {
               isActive ? classes.active : undefined
             }
             to="/"
+            end
           >
             Home
           </NavLink>
