@@ -4,7 +4,7 @@ const AboutDetails = () => {
   const params = useParams();
   return (
     <>
-      <h1>Details {params.type}</h1>
+      <h1>Details of {params.type}</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
         laudantium, quae, architecto recusandae nostrum dignissimos beatae dolor
