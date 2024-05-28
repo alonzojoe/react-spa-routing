@@ -1,9 +1,4 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-  createRoutesFromElements,
-  Route,
-} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
@@ -18,7 +13,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        index: true, //useCase: index route - for showing a default page when parent path is in the url instead of path: '/'.
+        index: true, // Use case: index route - for showing a default page when the parent path is in the URL instead of path: '/'
         element: <Home />,
       },
       {
